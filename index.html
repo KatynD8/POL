@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porte Océane Levage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container logo_containter">
+        <img src="./assets/logo.png" alt="logo" />
+        <h1 class="logo">Porte Océane Levage</h1>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#about">Nous connaître</a></li>
+          <li><a href="#products">Nos produits</a></li>
+          <li><a href="#location">Nous trouver</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <button class="contact-btn" onclick="openModal()">
+        <span>Contactez nous</span>
+      </button>
+      <section id="about" class="section section--pink">
+        <div class="container">
+          <div class="section-content">
+            <img src="./assets/nousconnaitre.png" alt="Nous connaître" />
+            <div>
+              <h2>Nous connaître</h2>
+              <p>
+                Découvrez notre histoire, notre mission et l'équipe qui fait
+                avancer Porte Océane Levage chaque jour.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="section section--blue">
+        <div class="container">
+          <div class="section-content">
+            <img src="./assets/nosproduits.png" alt="Nos produits" />
+            <div>
+              <h2>Nos produits</h2>
+              <p>
+                Explorez notre gamme complète de solutions de levage,
+                manutention, et services associés.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="location" class="section section--green">
+        <div class="container">
+          <div class="section-content">
+            <img src="./assets/noustrouver.png" alt="Nous trouver" />
+            <div>
+              <h2>Nous trouver</h2>
+              <p>
+                Rendez-vous dans notre agence ou contactez-nous directement.
+                Accédez à nos coordonnées et plan d'accès.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2025 Porte Océane Levage – Tous droits réservés.</p>
+      </div>
+    </footer>
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Contactez-nous</h2>
+        <form>
+          <label for="email">Mail :</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="contact">Contact :</label>
+          <input type="text" id="contact" name="contact" required />
+
+          <label for="message">Corps du message :</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
