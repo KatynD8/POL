@@ -1,0 +1,22 @@
+/* Bouton devis */
+.devis-button {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  background-color: #ffb800;
+  color: white;
+  font-weight: bold;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: "Eurostile", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+.devis-button:hover {
+  background-color: #cc9300;
+}

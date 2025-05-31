@@ -1,0 +1,47 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.modal-overlay.active {
+  display: flex;
+}
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 90%;
+  font-family: "Eurostile", sans-serif;
+}
+.modal-content h2 {
+  margin-top: 0;
+}
+.devis-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.devis-form input,
+.devis-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: inherit;
+}
+.devis-form button {
+  background-color: #246485;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.devis-form button:hover {
+  background-color: #1b4a66;
+}

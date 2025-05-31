@@ -1,0 +1,78 @@
+@use "variables.scss";
+.app-container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.main-content {
+  margin-left: variables.$sidebar-width;
+
+  background-color: variables.$light-bg;
+  font-family: "Eurostile", sans-serif;
+
+  .main-content .section {
+    scroll-margin-top: 1rem; /* pour que le scroll ne cache pas le titre */
+  }
+
+  .section {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+  }
+
+  .hero-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      /* Overlay sombre */ url("../assets/herobanner_background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh;
+
+    h1 {
+      margin: 0;
+      position: absolute;
+      top: 30%;
+      left: 25%;
+      font-family: "Tomorrow", sans-serif;
+      font-weight: 700;
+      font-size: 70px;
+    }
+    h2 {
+      position: absolute;
+      top: 35%;
+      left: 25%;
+    }
+
+    p {
+      position: absolute;
+      top: 45%;
+      left: 30%;
+      width: 30%;
+      font-weight: 800;
+    }
+  }
+}
+
+.nav-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 15px 20px;
+}
+.nav-link:hover,
+.nav-link.active {
+  background-color: #fc7cd4;
+}
+
+#hero {
+  padding: 0;
+}

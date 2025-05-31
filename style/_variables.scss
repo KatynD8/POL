@@ -1,0 +1,12 @@
+$primary-color: #246485;
+$light-bg: #f8f9fa;
+$pinkpol: #fc7cd4;
+$sidebar-width: 220px;
+
+@font-face {
+  font-family: "Eurostile";
+  src: url("../assets/fonts/EurostileExtendedBlack.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Améliore les performances */
+}

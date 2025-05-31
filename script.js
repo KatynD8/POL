@@ -1,33 +1,52 @@
-// Modale de contact
-function openModal() {
-  document.getElementById("contactModal").style.display = "block";
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const navItems = document.querySelectorAll(".nav li");
+  const sections = document.querySelectorAll(".section");
 
-function closeModal() {
-  document.getElementById("contactModal").style.display = "none";
-}
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      // Désactive tout
+      navItems.forEach((i) => i.classList.remove("active"));
+      sections.forEach((sec) => sec.classList.remove("active"));
 
-window.onclick = function (event) {
-  const modal = document.getElementById("contactModal");
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
-
-// Navigation des sections avec expansion locale
-
-document.querySelectorAll(".section").forEach((section) => {
-  section.addEventListener("click", () => {
-    const isExpanded = section.classList.contains("fullscreen");
-
-    // Réinitialiser toutes les sections
-    document.querySelectorAll(".section").forEach((s) => {
-      s.classList.remove("fullscreen");
+      // Active le bon
+      item.classList.add("active");
+      const target = item.getAttribute("data-section");
+      document.getElementById(target).classList.add("active");
     });
+  });
+});
 
-    // Étendre uniquement si ce n'était pas déjà le cas
-    if (!isExpanded) {
-      section.classList.add("fullscreen");
+// Navigation active au scroll
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    if (scrollY >= sectionTop - 100) {
+      current = section.getAttribute("id");
     }
   });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+
+// Modale
+const openModalBtn = document.getElementById("openModal");
+const modalOverlay = document.getElementById("modalOverlay");
+
+openModalBtn.addEventListener("click", () => {
+  modalOverlay.classList.add("active");
+});
+
+modalOverlay.addEventListener("click", (e) => {
+  if (e.target === modalOverlay) {
+    modalOverlay.classList.remove("active");
+  }
 });

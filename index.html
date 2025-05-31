@@ -4,102 +4,141 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Porte Océane Levage</title>
+    <link rel="stylesheet" href="./style/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style/main.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container logo_containter">
-        <img src="./assets/logo.png" alt="logo" />
-        <h1 class="logo">Porte Océane Levage</h1>
-      </div>
-      <nav>
-        <ul class="nav-list">
-          <li><a href="#about">Nous connaître</a></li>
-          <li><a href="#products">Nos produits</a></li>
-          <li><a href="#location">Nous trouver</a></li>
-        </ul>
-      </nav>
-    </header>
+    <div class="app-container">
+      <aside class="sidebar">
+        <img src="./assets/logo.png" alt="" />
+        <nav class="nav">
+          <ul>
+            <li><a href="#hero" class="nav-link active">Accueil</a></li>
+            <li><a href="#produits" class="nav-link">Nos Produits</a></li>
+            <li>
+              <a href="#locations" class="nav-link">Nos Solutions Locations</a>
+            </li>
+            <li><a href="#connaitre" class="nav-link">Nous Connaître</a></li>
+            <li><a href="#trouver" class="nav-link">Nous trouver</a></li>
+          </ul>
+        </nav>
+      </aside>
 
-    <main>
-      <button class="contact-btn" onclick="openModal()">
-        <span>Contactez nous</span>
-      </button>
-      <section id="about" class="section section--pink">
-        <div class="container">
-          <div class="section-content">
-            <img src="./assets/nousconnaitre.png" alt="Nous connaître" />
-            <div>
-              <h2>Nous connaître</h2>
+      <main class="main-content">
+        <section id="hero" class="section active">
+          <div class="hero-banner">
+            <h1>Porte Océane Levage</h1>
+            <h2>Solutions de levage professionnelles</h2>
+            <p>
+              Découvrez notre gamme complète d'équipements de levage haute
+              performance. Grues, palans, ponts roulants et accessoires pour
+              tous vos besoins industriels.
+            </p>
+          </div>
+        </section>
+
+        <section id="produits" class="section">
+          <h2>Nos Produits</h2>
+          <div class="product-cards">
+            <div class="product-card">
+              <div class="product-header">
+                <span class="product-number">03</span>
+                <img
+                  src="./assets/grue_logo.svg"
+                  alt="Icône levage"
+                  class="product-icon"
+                />
+              </div>
+              <h3>Vente d'appareils de levage et pièces détachées</h3>
+              <hr />
               <p>
-                Découvrez notre histoire, notre mission et l'équipe qui fait
-                avancer Porte Océane Levage chaque jour.
+                BADT Levage vous propose à la vente l’ensemble de ses produits
+                neufs et pièces détachées pour appareils de manutention et de
+                levage.
               </p>
+              <button class="details-button">EN DÉTAILS</button>
+            </div>
+
+            <div class="product-card">
+              <div class="product-header">
+                <span class="product-number">04</span>
+                <img
+                  src="./assets/grue_logo.svg"
+                  alt="Icône radiocommande"
+                  class="product-icon"
+                />
+              </div>
+              <h3>Réparation de radiocommande</h3>
+              <hr />
+              <p>
+                Pour le dépannage et la réparation de radiocommande, vous pouvez
+                compter sur l’expertise de BADT Levage !
+              </p>
+              <button class="details-button">EN DÉTAILS</button>
+            </div>
+
+            <div class="product-card">
+              <div class="product-header">
+                <span class="product-number">05</span>
+                <img
+                  src="./assets/grue_logo.svg"
+                  alt="Icône engrenage"
+                  class="product-icon"
+                />
+              </div>
+              <h3>Contrôle de voie de roulement et appareil de levage</h3>
+              <hr />
+              <p>
+                BADT Levage est spécialisé dans le contrôle de vos voies de
+                roulement où circulent vos appareils de levage (pont roulant,
+                portique, etc.)
+              </p>
+              <button class="details-button">EN DÉTAILS</button>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="products" class="section section--blue">
-        <div class="container">
-          <div class="section-content">
-            <img src="./assets/nosproduits.png" alt="Nos produits" />
-            <div>
-              <h2>Nos produits</h2>
-              <p>
-                Explorez notre gamme complète de solutions de levage,
-                manutention, et services associés.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        <section id="locations" class="section">
+          <h2>Nos solutions de location</h2>
+          <p>Flexibilité, fiabilité et performance à votre service.</p>
+        </section>
 
-      <section id="location" class="section section--green">
-        <div class="container">
-          <div class="section-content">
-            <img src="./assets/noustrouver.png" alt="Nous trouver" />
-            <div>
-              <h2>Nous trouver</h2>
-              <p>
-                Rendez-vous dans notre agence ou contactez-nous directement.
-                Accédez à nos coordonnées et plan d'accès.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+        <section id="connaitre" class="section">
+          <h2>Nous Connaitre</h2>
+          <p>Notre histoire, notre expertise, notre équipe.</p>
+        </section>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>© 2025 Porte Océane Levage – Tous droits réservés.</p>
-      </div>
-    </footer>
-    <div id="contactModal" class="modal">
+        <section id="trouver" class="section">
+          <h2>Nous trouver</h2>
+          <p>Nos adresses, horaires, et moyens de contact.</p>
+        </section>
+      </main>
+    </div>
+
+    <!-- Bouton devis -->
+    <div class="devis-button" id="openModal">📞 Devis gratuit</div>
+
+    <!-- Modale -->
+    <div class="modal-overlay" id="modalOverlay">
       <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <h2>Contactez-nous</h2>
-        <form>
-          <label for="email">Mail :</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="contact">Contact :</label>
-          <input type="text" id="contact" name="contact" required />
-
-          <label for="message">Corps du message :</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
+        <h2>Demande de devis</h2>
+        <form class="devis-form">
+          <input type="text" placeholder="Nom" required />
+          <input type="email" placeholder="Email" required />
+          <input type="tel" placeholder="Téléphone" required />
+          <input type="text" placeholder="Département" />
+          <input type="text" placeholder="Société" />
+          <textarea placeholder="Votre message..." rows="5" required></textarea>
           <button type="submit">Envoyer</button>
         </form>
       </div>
     </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
