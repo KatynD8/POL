@@ -38,11 +38,12 @@ window.addEventListener("scroll", () => {
 });
 
 // Modale
-const openModalBtn = document.getElementById("openModal");
+const openModalBtns = document.querySelectorAll(".open-modal-btn");
 const modalOverlay = document.getElementById("modalOverlay");
-
-openModalBtn.addEventListener("click", () => {
-  modalOverlay.classList.add("active");
+openModalBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    modalOverlay.classList.add("active");
+  });
 });
 
 modalOverlay.addEventListener("click", (e) => {

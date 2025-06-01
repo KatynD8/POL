@@ -277,13 +277,14 @@ body {
   background-color: #246485;
 }
 
-#openModal {
+.fixed-modal-btn {
   position: fixed;
   bottom: 60px;
   right: 30px;
 }
 
 .openmodalhero {
+  position: absolute;
   top: 60%;
   left: 30%;
   bottom: 0%;
